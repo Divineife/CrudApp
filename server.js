@@ -6,7 +6,7 @@ const port = process.env.PORT;
 
 //mongoose setup
 const mongoose = require('mongoose');
-const connectionString = 'mongodb://localhost:5000/CrudAppDb';
+const connectionString = 'mongodb://localhost:27017/CrudAppDb';
 
 app.use(express.json());
 
@@ -47,6 +47,7 @@ app.post('/profiles', function(req, res) {
 
 //get users profile via a get request
 app.get('/profile/:id', (req, res) =>{
+    
     Profile.findById(req.params.id, (err, profile) => {
         if (err) {
             return res.status(500).json({message: err })
@@ -56,6 +57,7 @@ app.get('/profile/:id', (req, res) =>{
             return res.status(200).json({message: "User Profile has been fetched", data: profile})
         }
     })
+    res.send('<h1>Looks good</h1>');
 })
 
 //to update a profile. I assumed that the user email cannot be changed
