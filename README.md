@@ -11,9 +11,4 @@ TODO
 Set up Mongoose
 Create Schema
 Create routes
-Data contains: name email country
-
-TODO
-
-create routes
-Update folder structures
+Data contains: name country and email
