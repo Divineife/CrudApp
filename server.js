@@ -1,6 +1,7 @@
 const express = require('express');
 const app = express();
 const port = process.env.PORT || 5000;
+const dotenv = require('dotenv').config();
 
 // const nodemon = require('nodemon');
 
@@ -88,5 +89,5 @@ app.delete('/profiles/:id', (req, res) =>{
     })
 })
 
-app.listen(5000, () => console.log('app listening on port 5000'));
+app.listen(port, () => console.log('app listening on port 5000'));
 
