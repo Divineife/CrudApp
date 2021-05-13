@@ -1,12 +1,13 @@
 const express = require('express');
 const app = express();
-const port = process.env.PORT;
+const port = process.env.PORT || 5000;
 
 // const nodemon = require('nodemon');
 
 //mongoose setup
 const mongoose = require('mongoose');
-const connectionString = 'mongodb+srv://admin-divine:<Kayode>@cluster0.sdpi3.mongodb.net/CrudAppDb';
+const connectionString = process.env.connectionString;
+// heroku config:set connectionString="mongodb+srv://admin-divine:Kayode@cluster0.sdpi3.mongodb.net/CrudAppDb"
 
 app.use(express.json());
 
