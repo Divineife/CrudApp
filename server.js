@@ -6,7 +6,7 @@ const port = process.env.PORT;
 
 //mongoose setup
 const mongoose = require('mongoose');
-const connectionString = 'mongodb://localhost:27017/CrudAppDb';
+const connectionString = 'mongodb+srv://admin-divine:<Kayode>@cluster0.sdpi3.mongodb.net/CrudAppDb';
 
 app.use(express.json());
 
